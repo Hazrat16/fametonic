@@ -5,7 +5,7 @@ export default function Home() {
       style={{ backgroundImage: 'url("/images/bg-image.png")' }}
     >
       {/* Left Text Side */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-[120px] pt-56 md:pt-[120px]">
+      <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-[0px] pt-28 md:pt-[120px]">
         <h1 className="font-urbanist font-bold text-[28px] md:text-[35px] leading-[100%] text-white mb-4">
           Want to Turn Social Media Into a <br className="hidden md:block" />
           Profitable Career?
@@ -37,24 +37,28 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="w-full md:w-1/2">
-          <button className="w-full h-[40px] rounded-[10px] bg-[#FC004E] text-white font-figtree font-semibold text-sm px-10 py-2 shadow-[2px_2px_10px_#00E7F9] mb-2">
-            Take the Quiz
-          </button>
+        <div className="flex flex-col-reverse md:flex-col">
+          {/* Button Section - should appear last in mobile, first in desktop */}
+          <div className="w-full md:w-1/2">
+            <button className="w-full h-[40px] rounded-[10px] bg-[#FC004E] text-white font-figtree font-semibold text-sm px-10 py-2 shadow-[2px_2px_10px_#00E7F9] mb-2">
+              Take the Quiz
+            </button>
 
-          <p className="font-figtree font-normal text-[12px] leading-[16px] text-center text-white">
-            1-minute quiz for personalized insights
+            <p className="font-figtree font-normal text-[12px] leading-[16px] text-center text-white">
+              1-minute quiz for personalized insights
+            </p>
+          </div>
+
+          {/* Text Sections */}
+          <p className="text-[12px] leading-[22px] text-[#ABABAB] my-[30px] font-medium">
+            By clicking &quot;Get Started&quot;, you agree with Terms and
+            Conditions, Privacy Policy, Subscription Terms
+          </p>
+
+          <p className="text-[10px] leading-[22px] font-medium text-[#ABABAB] mb-6 md:mb-[30px]">
+            Fametonic 2025 © All Rights Reserved.
           </p>
         </div>
-
-        <p className="text-[12px] leading-[22px] text-[#ABABAB] my-[30px] font-medium">
-          By clicking &quot;Get Started&quot;, you agree with Terms and
-          Conditions, Privacy Policy, Subscription Terms
-        </p>
-
-        <p className="text-[10px] leading-[22px] font-medium text-[#ABABAB] mb-6 md:mb-[30px]">
-          Fametonic 2025 © All Rights Reserved.
-        </p>
       </div>
 
       {/* Image container (empty on purpose to display bg-image) */}
