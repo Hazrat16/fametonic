@@ -1,18 +1,19 @@
 export default function Home() {
   return (
     <div
-      className="h-screen flex bg-no-repeat  bg-[length:62%_100%] bg-[position:100%] "
+      className="min-h-screen flex flex-col-reverse md:flex-row bg-no-repeat bg-[length:100%] md:bg-[length:62%_100%] bg-[position:top_center] md:bg-[position:right] overflow-x-hidden "
       style={{ backgroundImage: 'url("/images/bg-image.png")' }}
     >
       {/* Left Text Side */}
-      <div className="w-1/2 flex flex-col mt-[120px] ">
-        <h1 className="font-urbanist font-bold text-[35px] leading-[100%] text-white mb-4">
-          Want to Turn Social Media Into a <br />
+      <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-[120px] pt-56 md:pt-[120px]">
+        <h1 className="font-urbanist font-bold text-[28px] md:text-[35px] leading-[100%] text-white mb-4">
+          Want to Turn Social Media Into a <br className="hidden md:block" />
           Profitable Career?
         </h1>
 
-        <h2 className="font-urbanist font-bold text-[35px] leading-[100%]  text-[#00E7F9]  text-shadow-[0px_4px_4px_#FC004E] mb-4 w-fit">
-          Discover your way to success <br /> with Fametonic:
+        <h2 className="font-urbanist font-bold text-[28px] md:text-[35px] leading-[100%] text-[#00E7F9] mb-4 w-fit drop-shadow-[0_4px_4px_#FC004E]">
+          Discover your way to success <br className="hidden md:block" /> with
+          Fametonic:
         </h2>
 
         <p className="font-figtree font-semibold text-[16px] leading-[22px] text-white mb-6">
@@ -21,35 +22,22 @@ export default function Home() {
 
         {/* Feature Points */}
         <div className="space-y-2 mb-6">
-          <div className="flex items-start gap-2">
-            <span className="text-[#00E7F9] mt-1">✔</span>
-            <span className="font-figtree text-[14px] leading-[20px] text-white">
-              Personalized creator growth strategy
-            </span>
-          </div>
-          <div className="flex items-start gap-2">
-            <span className="text-[#00E7F9] mt-1">✔</span>
-            <span className="font-figtree text-[14px] leading-[20px] text-white">
-              Instant access to actionable tips
-            </span>
-          </div>
-          <div className="flex items-start gap-2">
-            <span className="text-[#00E7F9] mt-1">✔</span>
-            <span className="font-figtree text-[14px] leading-[20px] text-white">
-              Create viral TikToks and Reels step by step with easy-to-follow
-              lessons
-            </span>
-          </div>
-          <div className="flex items-start gap-2">
-            <span className="text-[#00E7F9] mt-1">✔</span>
-            <span className="font-figtree text-[14px] leading-[20px] text-white">
-              Create viral TikToks and Reels step by step with easy-to-follow
-              lessons
-            </span>
-          </div>
+          {[
+            "Personalized creator growth strategy",
+            "Instant access to actionable tips",
+            "Create viral TikToks and Reels step by step with easy-to-follow lessons",
+            "Create viral TikToks and Reels step by step with easy-to-follow lessons",
+          ].map((item, index) => (
+            <div key={index} className="flex items-start gap-2">
+              <span className="text-[#00E7F9] mt-1">✔</span>
+              <span className="font-figtree text-[14px] leading-[20px] text-white">
+                {item}
+              </span>
+            </div>
+          ))}
         </div>
 
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <button className="w-full h-[40px] rounded-[10px] bg-[#FC004E] text-white font-figtree font-semibold text-sm px-10 py-2 shadow-[2px_2px_10px_#00E7F9] mb-2">
             Take the Quiz
           </button>
@@ -64,12 +52,13 @@ export default function Home() {
           Conditions, Privacy Policy, Subscription Terms
         </p>
 
-        <p className="text-[10px] leading-[22px] font-medium text-[#ABABAB] my-[30px]">
-          Fametonic 2025 ©All Rights Reserved.
+        <p className="text-[10px] leading-[22px] font-medium text-[#ABABAB] mb-6 md:mb-[30px]">
+          Fametonic 2025 © All Rights Reserved.
         </p>
       </div>
 
-      <div className="w-1/2"></div>
+      {/* Image container (empty on purpose to display bg-image) */}
+      <div className="w-full md:w-1/2 h-[250px] md:h-auto"></div>
     </div>
   );
 }
