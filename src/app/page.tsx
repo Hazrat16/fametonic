@@ -1,103 +1,75 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div
+      className="h-screen flex bg-no-repeat  bg-[length:62%_100%] bg-[position:100%] "
+      style={{ backgroundImage: 'url("/images/bg-image.png")' }}
+    >
+      {/* Left Text Side */}
+      <div className="w-1/2 flex flex-col mt-[120px] ">
+        <h1 className="font-urbanist font-bold text-[35px] leading-[100%] text-white mb-4">
+          Want to Turn Social Media Into a <br />
+          Profitable Career?
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <h2 className="font-urbanist font-bold text-[35px] leading-[100%]  text-[#00E7F9]  text-shadow-[0px_4px_4px_#FC004E] mb-4 w-fit">
+          Discover your way to success <br /> with Fametonic:
+        </h2>
+
+        <p className="font-figtree font-semibold text-[16px] leading-[22px] text-white mb-6">
+          Start growing your influence right away—no waiting required!
+        </p>
+
+        {/* Feature Points */}
+        <div className="space-y-2 mb-6">
+          <div className="flex items-start gap-2">
+            <span className="text-[#00E7F9] mt-1">✔</span>
+            <span className="font-figtree text-[14px] leading-[20px] text-white">
+              Personalized creator growth strategy
+            </span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-[#00E7F9] mt-1">✔</span>
+            <span className="font-figtree text-[14px] leading-[20px] text-white">
+              Instant access to actionable tips
+            </span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-[#00E7F9] mt-1">✔</span>
+            <span className="font-figtree text-[14px] leading-[20px] text-white">
+              Create viral TikToks and Reels step by step with easy-to-follow
+              lessons
+            </span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-[#00E7F9] mt-1">✔</span>
+            <span className="font-figtree text-[14px] leading-[20px] text-white">
+              Create viral TikToks and Reels step by step with easy-to-follow
+              lessons
+            </span>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="w-1/2">
+          <button className="w-full h-[40px] rounded-[10px] bg-[#FC004E] text-white font-figtree font-semibold text-sm px-10 py-2 shadow-[2px_2px_10px_#00E7F9] mb-2">
+            Take the Quiz
+          </button>
+
+          <p className="font-figtree font-normal text-[12px] leading-[16px] text-center text-white">
+            1-minute quiz for personalized insights
+          </p>
+        </div>
+
+        <p className="text-[12px] leading-[22px] text-[#ABABAB] my-[30px] font-medium">
+          By clicking &quot;Get Started&quot;, you agree with Terms and
+          Conditions, Privacy Policy, Subscription Terms
+        </p>
+
+        <p className="text-[10px] leading-[22px] font-medium text-[#ABABAB] my-[30px]">
+          Fametonic 2025 ©All Rights Reserved.
+        </p>
+      </div>
+
+      <div className="w-1/2"></div>
     </div>
   );
 }
