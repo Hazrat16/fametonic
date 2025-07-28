@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div className="px-[20px] md:px-[60px] lg:px-[211px]">
-      <nav className="shadow-md py-4 flex items-center justify-between relative">
+      <nav className="shadow-md py-4 flex items-center justify-between relative ml-20 md:ml-0">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold text-gray-800">
           <Image src="/images/logo.png" alt="Logo" width={173.12} height={74} />
