@@ -49,14 +49,16 @@ export default function Home() {
           </div>
 
           {/* Text Sections */}
-          <p className="text-[12px] leading-[22px]  text-[#ABABAB] my-[30px] font-medium">
-            By clicking &quot;Get Started&quot;, you agree with Terms and
-            Conditions, Privacy Policy, Subscription Terms
-          </p>
+          <div className="flex flex-col md:flex-col items-center text-center md:text-start md:items-start">
+            <p className="text-[12px] leading-[22px] text-[#ABABAB] my-[30px] font-medium">
+              By clicking &quot;Get Started&quot;, you agree with Terms and
+              Conditions, Privacy Policy, Subscription Terms
+            </p>
 
-          <p className="text-[10px] leading-[22px] font-medium text-[#ABABAB] mb-6 md:mb-[30px]">
-            Fametonic 2025 © All Rights Reserved.
-          </p>
+            <p className="text-[10px] leading-[22px] font-medium text-[#ABABAB] mb-6 md:mb-[30px]">
+              Fametonic 2025 © All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
 
