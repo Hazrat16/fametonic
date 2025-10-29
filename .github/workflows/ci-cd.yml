@@ -5,6 +5,7 @@ on:
     branches: [main, develop]
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened, closed]
 
 env:
   NODE_VERSION: "18"
@@ -44,12 +45,17 @@ jobs:
           path: .next/
           retention-days: 1
 
-  # Deploy to Vercel (only on main branch)
+  # Deploy to Vercel (on push to main or PR merge to main)
   deploy:
     name: Deploy to Vercel
     needs: lint-and-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: |
+      (github.ref == 'refs/heads/main' && github.event_name == 'push') ||
+      (github.event_name == 'pull_request' && 
+       github.event.action == 'closed' && 
+       github.event.pull_request.merged == true &&
+       github.event.pull_request.base.ref == 'main')
 
     steps:
       - name: Checkout code
@@ -86,7 +92,3 @@ jobs:
               repo: context.repo.repo,
               body: '🚀 Deployment successful! Your app is now live on Vercel.'
             })
-
-# wMN6y7JmSfPjq6grgrgz9M07
-# team_hMgC0Hvw2Jrex25PZpkTsJ5z
-# prj_bRbs5zjvrgD1zsocFkV2EsVexdBh
