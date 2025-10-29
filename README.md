@@ -1,36 +1,191 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fametonic - Urban Riders App
 
-## Getting Started
+A modern transportation booking app built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern UI/UX**: Clean, responsive design with Tailwind CSS
+- **TypeScript**: Full type safety and better developer experience
+- **Next.js 15**: Latest React framework with App Router
+- **CI/CD Pipeline**: Automated testing and deployment
+- **Vercel Deployment**: Fast, global CDN deployment
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- Git
+
+### Local Development
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <your-repo-url>
+   cd fametonic
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues
+- `npm run type-check` - Run TypeScript type checking
+- `npm run preview` - Build and preview production build locally
+
+## 🚀 Deployment
+
+### Automatic Deployment (Recommended)
+
+This project is configured with GitHub Actions for automatic CI/CD:
+
+1. **Push to main branch** - Automatically deploys to production
+2. **Push to develop branch** - Runs tests and builds
+3. **Pull requests** - Runs tests and linting
+
+### Manual Deployment
+
+#### Deploy to Vercel
+
+1. **Install Vercel CLI**
+
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Login to Vercel**
+
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy**
+   ```bash
+   npm run deploy
+   ```
+
+#### Deploy Preview
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run deploy:preview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 CI/CD Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### GitHub Actions Workflow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project includes a comprehensive CI/CD pipeline:
 
-## Learn More
+- **Lint & Test**: Runs on every push and PR
+- **Type Check**: Ensures TypeScript compliance
+- **Build**: Creates production build
+- **Deploy**: Automatically deploys to Vercel on main branch
 
-To learn more about Next.js, take a look at the following resources:
+### Required Secrets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add these secrets to your GitHub repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. `VERCEL_TOKEN` - Your Vercel API token
+2. `VERCEL_ORG_ID` - Your Vercel organization ID
+3. `VERCEL_PROJECT_ID` - Your Vercel project ID
 
-## Deploy on Vercel
+### Getting Vercel Credentials
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Vercel Token**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - Go to [Vercel Dashboard](https://vercel.com/account/tokens)
+   - Create a new token
+
+2. **Organization ID**:
+
+   - Go to [Vercel Settings](https://vercel.com/account)
+   - Copy your organization ID
+
+3. **Project ID**:
+   - Create a new project in Vercel
+   - Copy the project ID from the project settings
+
+## 📁 Project Structure
+
+```
+fametonic/
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml          # GitHub Actions workflow
+├── src/
+│   ├── app/                   # Next.js App Router
+│   │   ├── layout.tsx        # Root layout
+│   │   ├── page.tsx          # Home page
+│   │   └── globals.css       # Global styles
+│   ├── components/           # React components
+│   └── Assets/               # Static assets
+├── public/                    # Public assets
+├── vercel.json               # Vercel configuration
+├── package.json              # Dependencies and scripts
+└── README.md                 # This file
+```
+
+## 🎨 Styling
+
+This project uses:
+
+- **Tailwind CSS** for utility-first styling
+- **Custom CSS** for specific design requirements
+- **Responsive design** for all screen sizes
+
+## 🔍 Code Quality
+
+- **ESLint** for code linting
+- **TypeScript** for type safety
+- **Prettier** for code formatting (recommended)
+- **Husky** for git hooks (optional)
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+If you encounter any issues:
+
+1. Check the [GitHub Issues](https://github.com/your-username/fametonic/issues)
+2. Create a new issue with detailed information
+3. Contact the development team
+
+---
+
+**Happy coding! 🚀**
