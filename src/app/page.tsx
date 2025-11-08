@@ -53,7 +53,7 @@ export default function Home() {
             </p>
 
             <p className="text-[10px] leading-[22px] font-medium text-[#ABABAB] mb-6 md:mb-[30px]">
-              Fametonic 2025 © All Rights Reserved.
+              Barcelona, Spain 2025 © All Rights Reserved.
             </p>
           </div>
         </div>
