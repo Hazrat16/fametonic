@@ -9,7 +9,7 @@ export default function Home() {
       <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-[0px] pt-28 md:pt-0">
         <h1 className="font-urbanist font-extrabold md:font-bold text-[25px] md:text-[35px] leading-[100%] text-white mb-4">
           Want to Turn Social Media Into a <br className="hidden md:block" />
-          Profitable Career?
+          Profitable Career???????????????????????????
         </h1>
 
         <h2 className="font-urbanist font-extrabold  md:font-bold text-[25px] md:text-[35px] leading-[100%] text-[#00E7F9] mb-4 w-fit drop-shadow-[0_4px_4px_#FC004E]">
